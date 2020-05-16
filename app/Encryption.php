@@ -40,8 +40,7 @@ class Encryption{
             }
             $contents = file_get_contents( $filePath );  
             $cipher   = \bolt_encrypt( "?>".$contents, $php_blot_key );
-            $bolt_decrypt = 'base64_decode(\'' . base64_encode('bolt_decrypt') . '\')';
-            $preppand = "<?php\n{$bolt_decrypt}(__FILE__, \$_SERVER['LICENSE_IDENTIFIER']); return 0;\n##!!!##";
+            $preppand = "<?php\nbolt_decrypt(__FILE__, \$_SERVER['LICENSE_IDENTIFIER']); return 0;\n##!!!##";
             $re = '/\<\?php/m';
             preg_match($re, $contents, $matches ); 
             
