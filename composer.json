@@ -1,7 +1,7 @@
 {
     "name": "mtw/phpbolt-env",
     "description": "phpBolt Encryprion (.htaccess)",
-    "bin": ["bin/bolt"],
+    "bin": ["bin/bolt-env"],
     "require": {
         "php" : ">=7.0"
     },
