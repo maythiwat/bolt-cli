@@ -40,8 +40,7 @@ class Encryption{
             }
             $contents = file_get_contents( $filePath );  
             $cipher   = \bolt_encrypt( "?>".$contents, $php_blot_key );
-            $preppand = '<?php bolt_decrypt(__FILE__, $_SERVER[\'LICENSE_IDENTIFIER\']); return 0;
-            ##!!!##';
+            $preppand = "<?php\nbolt_decrypt(__FILE__, \$_SERVER['LICENSE_IDENTIFIER']); return 0;\n##!!!##";
             $re = '/\<\?php/m';
             preg_match($re, $contents, $matches ); 
             
@@ -54,9 +53,9 @@ class Encryption{
             unset( $cipher );
             unset( $contents );
         }
-        $out_str       = substr_replace($src, '', 0, 4);
-        $file_location = __DIR__."/encrypted".$out_str;
-        $this->printer->display( "Successfully Encrypted... Please check in " .$file_location." folder.");
+        //$out_str       = substr_replace($src, '', 0, 4);
+        //$file_location = __DIR__."/encrypted".$out_str;
+        $this->printer->display("Successfully Encrypted...");
         
     }
 
