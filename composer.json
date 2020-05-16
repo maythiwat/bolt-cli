@@ -1,6 +1,6 @@
 {
-    "name": "phpbolt/encrypt",
-    "description": "phpBolt Encryprion",
+    "name": "phpbolt-env",
+    "description": "phpBolt Encryprion (.htaccess)",
     "bin": ["bin/bolt"],
     "require": {
         "php" : ">=7.0"
